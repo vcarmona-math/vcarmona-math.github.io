@@ -7,7 +7,20 @@
   <title>Victor Carmona</title>
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Para ejecutar fórmulas matemáticas-->
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]}
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+
 </head>
+
+
 <body>
   <header class="site-header">
     <a class="site-name" href="index.html">Victor Carmona</a>
@@ -31,19 +44,34 @@
       <img class="portrait" src="assets/images/foto.jpg" alt="Victor Carmona">
       <h1>Victor Carmona</h1>
       <p class="role">Postdoctoral researcher<br><a href="https://imag.umontpellier.fr/">Université de Montpellier · IMAG</a></p>
+      <!--Si quiero lista vertical en lugar de lista horizontal de simbolos
       <p class="profile-links">
-        <a href="mailto:victor.carmona-sanchez@umontpellier.fr">[[at]]</a>
+     Acabando con después de la lista
+     </p>-->
+       <span class="item-links">
+        <a href="mailto:victor.carmona-sanchez@umontpellier.fr">
+            <img src="assets/images/Email_logo.svg" alt="Simbolo email"width="20" height="20" /> </a>
+
         <a href="assets/docs/CV Victor.pdf">CV</a>
-        <a href="https://orcid.org/0000-0003-2865-0219">ORCID</a>
-        <a href="https://scholar.google.com/citations?user=TGt5r8EAAAAJ&hl=es">Google Scholar</a>
-      </p>
+
+        <a href="https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=Carmona%2C+Victor&terms-0-field=author&terms-1-operator=NOT&terms-1-term=Carmona%2C+Victoriano&terms-1-field=author&classification-mathematics=y&classification-physics_archives=all&classification-include_cross_list=include&date-filter_by=all_dates&date-year=&date-from_date=&date-to_date=&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first">
+            <img src="assets/images/arXiv_logo.svg" alt="Simbolo ORCID" width="20" height="20" /></a>
+
+        <a href="https://orcid.org/0000-0003-2865-0219">
+            <img src="assets/images/ORCID_logo.svg" alt="Simbolo ORCID" width="20" height="20" /></a>
+
+        <a href="https://scholar.google.com/citations?user=TGt5r8EAAAAJ&hl=es">
+            <img src="assets/images/Google_Scholar_logo.svg" alt="Simbolo Google Scholar" width="20" height="20"/></a>
+
+        </span>
+
     </aside>
 
     <div class="main-content">
       <section class="intro">
         <p class="eyebrow">Academic webpage</p>
         <h2>About me</h2>
-        <p>I am a postdoc at the Institut Montpelliérain Alexander Grothendieck (IMAG), working with Damien Calaque. Prior to that I was a postdoc at MPI-MiS Leipzig working in the research group "Mathematical Structures in Physics", and even before I was a PhD student at the University of Seville under the supervision of Fernando Muro and Ramon Flores. My research interests are somehow broad; one might say, homotopy theory and its tubular neighborhood (whatever this means).</p>
+        <p>I am a postdoc at the Institut Montpelliérain Alexander Grothendieck (IMAG), working with Damien Calaque. Prior to that I was a postdoc at MPI-MiS Leipzig working in the research group "Mathematical Structures in Physics" leaded by Daniel Roggenkamp, and even before I was a PhD student at the University of Seville under the supervision of Fernando Muro and Ramon Flores. My research interests are somehow broad; one might say, homotopy theory and its tubular neighborhood (whatever this means).</p>
         <p>I have/had the pleasure of working on different projects together with: L. Alonso · A. Jeremías, K. Arakawa · F. Pratali, J. Aramayona · F. Cantero · J.J. Gutiérrez, J. Millès · S. Yalin, M. Benini · A. Grant-Stuart · P. Naaijkens · A. Schenkel, D. Calaque, F. Muro · R. Flores, and A. Švraka.</p>
         <p>A few keywords: higher categories and higher algebra, [pr(op]erads), Goodwillie and manifold calculus, factorization algebras, quantum field theory...</p>
       </section>
@@ -70,5 +98,23 @@
   </main>
 
   <footer class="site-footer">© <span id="year">2026</span> Victor Carmona</footer>
+
+  <!--Código para que el menú esté abierto en el ordenador y cerrado en el móvil de manera automática-->
+  <script>
+    const navMenu = document.querySelector("details.navigation");
+
+    if (navMenu) {
+      const mobile = window.matchMedia("(max-width: 760px)");
+
+      function adaptMenu() {
+        navMenu.open = !mobile.matches;
+      }
+
+      adaptMenu();
+      mobile.addEventListener("change", adaptMenu);
+    }
+  </script>
+
+
 </body>
 </html>

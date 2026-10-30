@@ -4,10 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Academic webpage of Victor Carmona.">
-  <title>Victor Carmona | Academic webpage</title>
+  <title>Victor Carmona</title>
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Para ejecutar fórmulas matemáticas-->
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]}
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+
 </head>
+
 <body>
   <header class="site-header">
     <a class="site-name" href="index.html">Victor Carmona</a>
@@ -34,31 +46,53 @@
   </header>
 
 <section class="section-block">
-  <h2>Materiales docentes</h2>
+  <h2><!--Introduce título de sección aqui si quieres--> </h2>
   <ul class="simple-list resource-list">
 
-    <li><a href="#">Apuntes de Nombre de la asignatura</a><span class="item-meta">PDF · Actualizado en AAAA</span></li>
+    <li><a href="https://www.mis.mpg.de/events/event/deformation-theory-of-algebras">Deformation theory of algebras</a><span class="item-meta"> Max-Planck Institute for Mathematics in the Sciences, Apr-Jun 2026. </span></li>
 
-    <li><a href="#">Ejercicios y soluciones</a><span class="item-meta">PDF</span></li>
+    <li><a href="https://2026.bienalrsme.com/">Parallel session: Higher structures in Algebra, Geometry and Topology</a><span class="item-meta"> Congreso bianual de la RSME, Jan 2026. </span></li>
+
+    <li><a href="https://www.imus.us.es/congresos/BYMAT/">7th BYMAT Conference</a><span class="item-meta"> (Scientific committee), University of Seville, Nov 2025. </span></li>
+
+    <li><a href="https://www.mis.mpg.de/events/event/the-theory-and-practice-of-categories">The theory and practice of $\infty$-categories</a><span class="item-meta"> Max-Planck Institute for Mathematics in the Sciences, May-Jul 2025. </span></li>
+
+    <li><a href="https://jovenes2025.rsme.es/paralelaGT06.html">Parallel session: Categorical and Homotopical Methods</a><span class="item-meta"> VII Congreso de Jóvenes Investigadores de la RSME, Jan 2025. </span></li>
+
+    <li><a href="https://www.imus.us.es/www/#actividad/2875">An Allegedly Somewhat Friendly Introduction to Infinity-Operads</a><span class="item-meta"> University of Seville · IMUS (Hybrid), Oct 2022. </span></li>
+
+    <li><a href="https://congreso.us.es/etop2021/">XXVI Encuentro de Topología [XXVI ET] & IX Encuentro de Jóvenes Topólogxs [IX EJT]</a><span class="item-meta"> University of Seville · IMUS, Oct 2021. </span></li>
+
+    <li><a href="https://congreso.us.es/mchagt2021/">Métodos Categóricos y Homotópicos en Álgebra, Geometría y Topología [MCHAGT]</a><span class="item-meta"> University of Seville · IMUS, June 2021. </span></li>
+
+    <li><a href="https://www.imus.us.es/www/#actividad/2524">IMUS Virtual Series: Operads in Topology</a><span class="item-meta"> IMUS (Online), Apr-May 2020. </span></li>
+
+    <li><a href="https://www.imus.us.es/www/#actividad/2606">IMUS Virtual Series: Junior Topology Series</a><span class="item-meta"> IMUS (Online), Mar-Jul 2020. </span></li>
+
+    <li><a href="https://www.imus.us.es/www/#actividades/PHD">PhD Seminar</a><span class="item-meta"> IMUS, Sep 2017-Oct 2018. </span></li>
 
   </ul></section>
-
-<section class="section-block">
-  <h2>Enlaces útiles</h2>
-  <ul class="simple-list resource-list">
-
-    <li><a href="https://orcid.org/">ORCID</a><span class="item-meta">Identificador de investigadora</span></li>
-
-    <li><a href="https://scholar.google.com/">Google Scholar</a><span class="item-meta">Perfil de publicaciones</span></li>
-
-    <li><a href="#">Otro recurso</a><span class="item-meta">Descripción breve</span></li>
-
-</ul></section>
-
 
 
 </main>
 
 <footer class="site-footer">© <span id="year">2026</span> Victor Carmona</footer>
+
+<!--Código para que el menú esté abierto en el ordenador y cerrado en el móvil de manera automática-->
+<script>
+  const navMenu = document.querySelector("details.navigation");
+
+  if (navMenu) {
+    const mobile = window.matchMedia("(max-width: 760px)");
+
+    function adaptMenu() {
+      navMenu.open = !mobile.matches;
+    }
+
+    adaptMenu();
+    mobile.addEventListener("change", adaptMenu);
+  }
+</script>
+
 </body>
 </html>

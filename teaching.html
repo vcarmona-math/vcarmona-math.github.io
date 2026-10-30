@@ -4,10 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Academic webpage of Victor Carmona.">
-  <title>Victor Carmona | Academic webpage</title>
+  <title>Victor Carmona</title>
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
+
+<!-- Para ejecutar fórmulas matemáticas-->
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: {'[+]': [['$', '$']]}
+    }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+
 </head>
+
 <body>
   <header class="site-header">
     <a class="site-name" href="index.html">Victor Carmona</a>
@@ -35,12 +47,11 @@
 <section class="section-block">
   <h2>2025–2026</h2><ul class="item-list teaching-list">
 
-   <li><strong>Nombre de la asignatura</strong>
-     <span class="item-meta">Grado o máster · Universidad · Semestre</span>
-     <span>Breve descripción opcional de la asignatura.</span>
+   <li><strong>Deformation theory of algebras</strong>
+     <span class="item-meta">Graduate course/Regular lecture series · MPI-MiS</span>
+     <!--<span>Breve descripción opcional de la asignatura.</span>-->
      <span class="item-links">
-      <a href="#">[Programa]</a>
-      <a href="#">[Materiales]</a></span></li>
+    <a href="www.mis.mpg.de/events/event/deformation-theoryofalgebras">[web]</a></span></li>
 
   </ul></section>
 
@@ -48,17 +59,79 @@
  <section class="section-block">
     <h2>2024–2025</h2><ul class="item-list teaching-list">
 
-     <li><strong>Nombre de la asignatura</strong>
-      <span class="item-meta">Grado o máster · Universidad · Semestre</span>
-      <span>Breve descripción opcional de la asignatura.</span>
-      <span class="item-links">
-        <a href="#">[Programa]</a>
-        <a href="#">[Materiales]</a></span></li>
+      <li><strong>The theory and practice of $\infty$-categories</strong>
+        <span class="item-meta">Graduate course/Regular lecture series · MPI-MiS</span>
+        <!--<span>Breve descripción opcional de la asignatura.</span>-->
+        <span class="item-links">
+       <a href="www.mis.mpg.de/events/event/the-theory-and-practiceof-categories">[web]</a></span></li>
 
   </ul></section>
+
+  <section class="section-block">
+     <h2>2021–2022</h2><ul class="item-list teaching-list">
+
+       <li><strong>Linear algebra</strong>
+         <span class="item-meta"> BSc in Mathematics (1st year) · University of Seville </span>
+         <!--<span>Breve descripción opcional de la asignatura.</span>-->
+        </li>
+
+   </ul></section>
+
+   <section class="section-block">
+      <h2>2020–2021</h2><ul class="item-list teaching-list">
+
+        <li><strong>Algebraic structures and Galois theory</strong>
+          <span class="item-meta"> BSc in Mathematics (3rd year) · University of Seville </span>
+          <!--<span>Breve descripción opcional de la asignatura.</span>-->
+          <span class="item-links">
+         <a href="https://asignatura.us.es/estalg/">[web]</a></span>
+         </li>
+
+        <li><strong>Linear algebra</strong>
+          <span class="item-meta"> BSc in Statistics (1st year) · University of Seville </span>
+          <!--<span>Breve descripción opcional de la asignatura.</span>-->
+         </li>
+
+    </ul></section>
+
+
+    <section class="section-block">
+       <h2>2019–2020</h2><ul class="item-list teaching-list">
+
+         <li><strong>Algebraic structures and Galois theory</strong>
+           <span class="item-meta"> BSc in Mathematics (3rd year) · University of Seville </span>
+           <!--<span>Breve descripción opcional de la asignatura.</span>-->
+           <span class="item-links">
+          <a href="https://asignatura.us.es/estalg/">[web]</a></span>
+          </li>
+
+         <li><strong>Linear algebra</strong>
+           <span class="item-meta"> BSc in Statistics (1st year) · University of Seville </span>
+           <!--<span>Breve descripción opcional de la asignatura.</span>-->
+          </li>
+
+     </ul></section>
 
 </main>
 
 <footer class="site-footer">© <span id="year">2026</span> Victor Carmona</footer>
+
+<!--Código para que el menú esté abierto en el ordenador y cerrado en el móvil de manera automática-->
+<script>
+  const navMenu = document.querySelector("details.navigation");
+
+  if (navMenu) {
+    const mobile = window.matchMedia("(max-width: 760px)");
+
+    function adaptMenu() {
+      navMenu.open = !mobile.matches;
+    }
+
+    adaptMenu();
+    mobile.addEventListener("change", adaptMenu);
+  }
+</script>
+
+
 </body>
 </html>

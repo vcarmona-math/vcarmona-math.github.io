@@ -4,10 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Academic webpage of Victor Carmona.">
-  <title>Victor Carmona | Academic webpage</title>
+  <title>Victor Carmona</title>
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Para ejecutar fórmulas matemáticas-->
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]}
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+
 </head>
+
 <body>
   <header class="site-header">
     <a class="site-name" href="index.html">Victor Carmona</a>
@@ -45,7 +57,7 @@
     </span></li>
 
 
-  <li><strong>C*-categorical prefactorization algebras for superselection sectors and topological order.</strong>
+  <li><strong>$C^\ast$-categorical prefactorization algebras for superselection sectors and topological order.</strong>
      w/ M. Benini, P. Naaijkens & A. Schenkel.
     <em>Communications in Mathematical Physics</em>, Vol 407, no. 1, 2026.
     <span class="item-links"><a href="https://doi.org/10.1007/s00220-025-05525-w">[DOI]</a><a href="https://arxiv.org/abs/2505.07960">[arXiv (2025)]</a>
@@ -145,5 +157,23 @@
 </main>
 
 <footer class="site-footer">© <span id="year">2026</span> Victor Carmona</footer>
+
+<!--Código para que el menú esté abierto en el ordenador y cerrado en el móvil de manera automática-->
+<script>
+  const navMenu = document.querySelector("details.navigation");
+
+  if (navMenu) {
+    const mobile = window.matchMedia("(max-width: 760px)");
+
+    function adaptMenu() {
+      navMenu.open = !mobile.matches;
+    }
+
+    adaptMenu();
+    mobile.addEventListener("change", adaptMenu);
+  }
+</script>
+
+
 </body>
 </html>
