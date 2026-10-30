@@ -50,3 +50,36 @@
     margin-top: 8px;
   }
 }
+
+
+
+/* Este código genera el tema claro y el botón para cambiar */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f8f4ec;
+  --surface: #fffdf8;
+  --ink: #1e180f;
+  --muted: #6b5f4f;
+  --line: #ded7cc;
+  --accent: #9e3329;
+  --accent-soft: #9e3329;
+}
+
+:root[data-theme="light"] .intro p,
+:root[data-theme="light"] .news-list li {
+  color: #40392f;
+}
+
+:root[data-theme="light"] a:hover {
+  color: #713027;
+}
+
+.theme-toggle {
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: transparent;
+  color: var(--accent-soft);
+  font: inherit;
+  cursor: pointer;
+}
