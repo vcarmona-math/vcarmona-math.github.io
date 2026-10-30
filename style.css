@@ -15,3 +15,38 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+
+
+/* Este código pone los iconos de enlaces a Email, CV, etc debajo de mi posición en la versión móvil */
+@media (max-width: 760px) {
+  .profile {
+    grid-template-columns: 88px minmax(0, 1fr);
+    grid-template-areas:
+      "photo name"
+      "photo role"
+      ". links";
+    align-items: start;
+  }
+
+  .profile > .portrait,
+  .profile > .portrait-placeholder {
+    grid-area: photo;
+  }
+
+  .profile > h1 {
+    grid-area: name;
+  }
+
+  .profile > .role {
+    grid-area: role;
+  }
+
+  .profile > .profile-links {
+    grid-area: links;
+    display: grid;
+    gap: 7px;
+    margin-top: 8px;
+  }
+}
