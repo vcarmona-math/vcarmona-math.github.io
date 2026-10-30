@@ -6,6 +6,15 @@
   <meta name="description" content="Academic webpage of Victor Carmona.">
   <title>Victor Carmona</title>
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <script>
+  try {
+    if (localStorage.getItem("site-theme") === "light") {
+      document.documentElement.dataset.theme = "light";
+    }
+  } catch (error) {
+    // Si el navegador no permite guardar preferencias, se usará el tema oscuro.
+  }
+</script>
   <link rel="stylesheet" href="style.css">
 
   <!-- Para ejecutar fórmulas matemáticas-->
